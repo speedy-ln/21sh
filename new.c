@@ -6,7 +6,7 @@
 /*   By: kcowle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/18 10:26:15 by kcowle            #+#    #+#             */
-/*   Updated: 2016/07/18 17:47:39 by kcowle           ###   ########.fr       */
+/*   Updated: 2016/07/25 12:35:56 by lnkadime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ void	ft_doublecoms(t_env *env, t_main *w, int input)
 	ft_putstr("<<^>>: ");
 	if (input != 1)
 		get_next_line(0, &w->line);
-	if (ft_strchr(w->line, ';') == 0 && ft_strchr(w->line, '|') == 0 && ft_strchr(w->line, '>') == 0)
+	if (ft_strchr(w->line, '<') == 0 && ft_strchr(w->line, ';') == 0 && ft_strchr(w->line, '|') == 0 && ft_strchr(w->line, '>') == 0)
 	{
 		ft_minishell(env, *w);
 	}
-	else if (ft_strchr(w->line, '|') == 0 && ft_strchr(w->line, '>') == 0)
+	else if (ft_strchr(w->line, '<') == 0 && ft_strchr(w->line, '|') == 0 && ft_strchr(w->line, '>') == 0)
 	{
 		coms = ft_strsplit(w->line, ';');
 		while (coms[y] != NULL)
@@ -70,7 +70,8 @@ void	ft_doublecoms(t_env *env, t_main *w, int input)
 			ft_strcpy(w->line, " ");
 			ft_minishell(env, *w);
 		}
-		else{
+		else
+		{
 			bytes_read = ft_strnew(BYTE_SIZE);
 			br = ft_strnew(BYTE_SIZE);
 			temp = ft_strnew(BYTE_SIZE);
@@ -84,7 +85,6 @@ void	ft_doublecoms(t_env *env, t_main *w, int input)
 			}
 			free(temp);
 			free(bytes_read);
-			ft_putstr(br);
 			fd[1] = dup(STDIN_FILENO);
 			dup2(fd[0], STDIN_FILENO);
 			close(fd[0]);

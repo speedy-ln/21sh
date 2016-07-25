@@ -6,7 +6,7 @@
 /*   By: kcowle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/10 14:07:10 by kcowle            #+#    #+#             */
-/*   Updated: 2016/07/18 14:23:22 by kcowle           ###   ########.fr       */
+/*   Updated: 2016/07/25 10:24:44 by lnkadime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,8 +148,6 @@ t_env	get_dir(t_env *env, char **line)
 				env->path = (char *)malloc(sizeof(char *) \
 						* ft_strlen(line2[i]) + 1);
 				ft_strcpy(env->path, line2[i]);
-				ft_putstr(env->path);
-				ft_putchar('\n');
 				return (*env);
 			}
 	}
