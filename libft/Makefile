@@ -6,7 +6,7 @@
 #    By: kcowle <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/07/10 14:10:25 by kcowle            #+#    #+#              #
-#    Updated: 2016/07/18 14:29:48 by kcowle           ###   ########.fr        #
+#    Updated: 2016/08/02 15:45:18 by lnkadime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,9 +79,10 @@ SRC =  	ft_c2da.c			\
 	  ft_lstnew.c			\
 	  ft_strmerge.c			\
 	  get_next_line.c		\
-
+	  ft_findstr.c
 
 SRCO = ft_c2da.o			\
+	   ft_findstr.o			\
 	   ft_strccut.o			\
 	   ft_strbcut.o			\
 	   ft_strnshift.o		\

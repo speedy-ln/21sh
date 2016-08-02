@@ -6,7 +6,7 @@
 /*   By: kcowle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/10 14:09:52 by kcowle            #+#    #+#             */
-/*   Updated: 2016/07/18 17:24:12 by kcowle           ###   ########.fr       */
+/*   Updated: 2016/08/02 15:44:33 by lnkadime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,6 @@ int					strgetfo(char *str, const char c);
 int					ft_strccut(char *str, char c);
 char				*ft_itoa_base(int value, int base);
 int					ft_putnbr_base_u(unsigned int nb, const char *base);
+int					ft_findstr(char *find, char *str);
 
 #endif
